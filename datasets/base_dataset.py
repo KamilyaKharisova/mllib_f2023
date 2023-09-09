@@ -23,5 +23,5 @@ class BaseDataset(ABC):
 
     def _divide_into_sets(self):
         # TODO define self.inputs_train, self.targets_train, self.inputs_valid, self.targets_valid,
-        #  self.inputs_test, self.targets_test; you can use your code from previous homework
+        #  self.inputs_test, self.targets_test
         pass
