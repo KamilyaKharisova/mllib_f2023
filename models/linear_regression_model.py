@@ -3,8 +3,6 @@ from configs.linear_regression_cfg import cfg
 from utils.enums import TrainType
 import sys
 
-import math
-
 class LinearRegression():
 
     def __init__(self, base_functions: list, learning_rate: float):
@@ -76,6 +74,9 @@ class LinearRegression():
             - φ_j(x_i) represents the j-th base function applied to the i-th input vector.
             - M is the total number of base functions (without φ_0(x_i)=1).
             - N is the total number of input vectors.
+
+            TODO: Implement this method using one loop over the base functions.
+
         """
         pass
 
@@ -94,6 +95,8 @@ class LinearRegression():
             - `numpy.dot(a, b)`
             OR
             - `a @ b`
+
+        TODO: Implement this method without using loop
 
         """
         pass
@@ -114,7 +117,7 @@ class LinearRegression():
 
             This formula represents the partial derivative of the mean squared error with respect to the weights.
 
-            TODO: Implement this method using matrix operations in numpy. a.T - транспонирование
+            TODO: Implement this method using matrix operations in numpy. a.T - transpose. Do not use loops
             """
         pass
 
@@ -131,7 +134,7 @@ class LinearRegression():
         - t is the vector of target values.
         - N is the number of data points.
 
-        TODO: Implement this method using numpy operations to compute the mean squared error.
+        TODO: Implement this method using numpy operations to compute the mean squared error. Do not use loops
         """
         pass
 
