@@ -3,6 +3,8 @@ from configs.linear_regression_cfg import cfg
 from utils.enums import TrainType
 import sys
 
+import math
+
 class LinearRegression():
 
     def __init__(self, base_functions: list, learning_rate: float):
@@ -112,7 +114,7 @@ class LinearRegression():
 
             This formula represents the partial derivative of the mean squared error with respect to the weights.
 
-            TODO: Implement this method using matrix operations in numpy.
+            TODO: Implement this method using matrix operations in numpy. a.T - транспонирование
             """
         pass
 
