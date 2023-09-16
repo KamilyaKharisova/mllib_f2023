@@ -2,7 +2,7 @@ import numpy as np
 from configs.linear_regression_cfg import cfg
 from utils.enums import TrainType
 import sys
-import math
+
 class LinearRegression():
 
     def __init__(self, base_functions: list, learning_rate: float):
