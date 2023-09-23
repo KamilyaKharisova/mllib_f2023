@@ -6,14 +6,14 @@ from utils.enums import SetType
 
 class LinRegDataset(BaseDataset):
 
-    def __init__(self, cfg: EasyDict):
+    def __init__(self, cfg: EasyDict, inputs_cols='inputs', target_cols='targets'):
         super(LinRegDataset, self).__init__(cfg.train_set_percent,cfg.valid_set_percent)
 
-        advertising_dataframe = read_dataframe_file(cfg.dataframe_path)
+        dataframe = read_dataframe_file(cfg.dataframe_path)
 
         # define properties
-        self.inputs = np.asarray(advertising_dataframe['inputs'])
-        self.targets = np.asarray(advertising_dataframe['targets'])
+        self.inputs = np.asarray(dataframe[inputs_cols])
+        self.targets = np.asarray(dataframe[target_cols])
 
         # divide into sets
         self._divide_into_sets()
@@ -43,4 +43,4 @@ class LinRegDataset(BaseDataset):
 if __name__ == '__main__':
     from configs.linear_regression_cfg import cfg
 
-    lin_reg_dataset = LinRegDataset(cfg)
+    lin_reg_dataset = LinRegDataset(cfg,['x_0','x_1','x_2'])

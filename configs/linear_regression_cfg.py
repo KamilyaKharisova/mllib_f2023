@@ -4,7 +4,7 @@ from utils.enums import TrainType
 cfg = EasyDict()
 
 # Path to the dataframe
-cfg.dataframe_path = '/Users/kamilyakharisova/Documents/homeworks_datasets/linear_regression_dataset.csv'
+cfg.dataframe_path = '/Users/kamilyakharisova/PycharmProjects/homeworks/mllib_f2023/linear_regression_dataset_with_inputs_as_vectors.csv'
 
 # cfg.base_functions contains callable functions to transform input features.
 # E.g., for polynomial regression: [lambda x: x, lambda x: x**2]
@@ -20,3 +20,8 @@ cfg.train_type = TrainType.gradient_descent
 
 # how many times the algorithm will process the entire dataset for gradient descent algorithm
 cfg.epoch = 100
+
+#cfg.exp_name = ''
+cfg.env_path = '' # Путь до файла .env где будет храниться api_token.
+cfg.project_name = ''
+
